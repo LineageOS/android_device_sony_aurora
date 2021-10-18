@@ -1,0 +1,35 @@
+# Copyright (c) 2017 Sony Mobile Communications Inc.
+#
+# product common configuration
+#
+
+# Touch boot
+on early-boot
+    write /sys/devices/virtual/input/siw_touch_input/init_late_session 1
+
+on property:dev.bootcomplete=1
+    chown system system /sys/devices/virtual/input/siw_touch_input/firmware
+    chmod 0600 /sys/devices/virtual/input/siw_touch_input/firmware
+    restorecon /sys/devices/virtual/input/siw_touch_input/firmware
+
+    chown system system /sys/devices/common_touch/touch/glove_mode
+    chmod 0600 sys/devices/common_touch/touch/glove_mode
+    restorecon sys/devices/common_touch/touch/glove_mode
+    chown system system /sys/devices/common_touch/touch/cover_mode
+    chmod 0600 sys/devices/common_touch/touch/cover_mode
+    restorecon sys/devices/common_touch/touch/cover_mode
+
+# Touch
+on property:dev.bootcomplete=1 && property:vendor.cover_state=*
+    write /sys/devices/common_touch/touch/cover_status ${vendor.cover_state}
+
+on property:vendor.backlight_on=*
+    write /sys/devices/common_touch/touch/irq_enable ${vendor.backlight_on}
+
+# Set value in property to sysfs for SuperStamina
+on property:sys.lcd_fpks=* && property:vendor.backlight_on=1
+    write /sys/devices/dsi_panel_driver/fps_mode ${sys.lcd_fpks}
+
+on post-fs-data
+# SONY: Camera
+    mkdir /data/misc/camera 0770 cameraserver camera
