@@ -4,14 +4,14 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/sony/akatsuki/akatsuki-vendor.mk)
+$(call inherit-product-if-exists, vendor/sony/aurora/aurora-vendor.mk)
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 2880
-TARGET_SCREEN_WIDTH := 1440
+TARGET_SCREEN_HEIGHT := 3840
+TARGET_SCREEN_WIDTH := 2160
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -41,10 +41,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
 
+# Init scripts
+PRODUCT_PACKAGES += \
+    init.sony-device-common.rc
+
 # Input
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/idc/sidekey_dev.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/sidekey_dev.idc \
-    $(LOCAL_PATH)/idc/touch_dev.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/touch_dev.idc
+    $(LOCAL_PATH)/idc/siw_touch_input.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/siw_touch_input.idc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl
@@ -52,7 +55,6 @@ PRODUCT_COPY_FILES += \
 # NFC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
-    $(LOCAL_PATH)/nfc/libnfc-nxp-octopus_RF.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp-octopus_RF.conf \
     $(LOCAL_PATH)/nfc/libnfc-nxp_RF.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp_RF.conf
 
 # Thermal

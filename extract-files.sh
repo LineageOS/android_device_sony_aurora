@@ -14,7 +14,7 @@ fi
 
 set -e
 
-export DEVICE=akatsuki
+export DEVICE=aurora
 export DEVICE_COMMON=tama-common
 export VENDOR=sony
 
