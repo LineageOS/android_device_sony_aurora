@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4d47a40e_8524b3ea",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 9392
+      },
+      "writtenOn": "2021-10-18T16:57:20Z",
+      "side": 1,
+      "message": "Initial commit?",
+      "range": {
+        "startLine": 7,
+        "startChar": 8,
+        "endLine": 7,
+        "endChar": 22
+      },
+      "revId": "a32df722e7f5e7f851a4a751c483a2c80a0e24e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2b098151_9102a9e0",
+        "filename": "overlay/frameworks/base/core/res/res/values/config.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 9392
+      },
+      "writtenOn": "2021-10-18T16:57:20Z",
+      "side": 1,
+      "message": "Unrelated, should probably be done in a separate commit",
+      "range": {
+        "startLine": 28,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 58
+      },
+      "revId": "a32df722e7f5e7f851a4a751c483a2c80a0e24e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4094c0f3_2921fd5f",
+        "filename": "rootdir/etc/init.sony-device-common.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 9392
+      },
+      "writtenOn": "2021-10-18T16:57:20Z",
+      "side": 1,
+      "message": "Shouldn\u0027t be required -- this module is built into the kernel, right?",
+      "range": {
+        "startLine": 6,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 24
+      },
+      "revId": "a32df722e7f5e7f851a4a751c483a2c80a0e24e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3744fa7c_f1109a40",
+        "filename": "rootdir/etc/init.sony-device-common.rc",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 9392
+      },
+      "writtenOn": "2021-10-18T16:57:20Z",
+      "side": 1,
+      "message": "Does aurora really need this?",
+      "range": {
+        "startLine": 15,
+        "startChar": 0,
+        "endLine": 20,
+        "endChar": 73
+      },
+      "revId": "a32df722e7f5e7f851a4a751c483a2c80a0e24e3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}

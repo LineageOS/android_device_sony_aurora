@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f2712235_47df3e89",
+        "filename": "overlay/frameworks/base/packages/SettingsProvider/res/values/defaults.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 9392
+      },
+      "writtenOn": "2021-10-18T16:57:20Z",
+      "side": 0,
+      "message": "Unrelated, should be done in a separate commit (if really necessary)",
+      "range": {
+        "startLine": 1,
+        "startChar": 0,
+        "endLine": 24,
+        "endChar": 12
+      },
+      "revId": "64923bbbd44c7410ec8713ba482a41b5ff7545a9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": true
+    }
+  ]
+}
