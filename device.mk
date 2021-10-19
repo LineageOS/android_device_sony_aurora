@@ -41,10 +41,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
 
+# Init scripts
+PRODUCT_PACKAGES += \
+    init.sony-device-aurora.rc
+
 # Input
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/idc/sidekey_dev.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/sidekey_dev.idc \
-    $(LOCAL_PATH)/idc/touch_dev.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/touch_dev.idc
+    $(LOCAL_PATH)/idc/siw_touch_input.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/siw_touch_input.idc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl
