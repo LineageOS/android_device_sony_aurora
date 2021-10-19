@@ -4,14 +4,14 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/sony/akatsuki/akatsuki-vendor.mk)
+$(call inherit-product-if-exists, vendor/sony/aurora/aurora-vendor.mk)
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 2880
-TARGET_SCREEN_WIDTH := 1440
+TARGET_SCREEN_HEIGHT := 3840
+TARGET_SCREEN_WIDTH := 2160
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
