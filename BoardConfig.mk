@@ -9,9 +9,6 @@
 
 DEVICE_PATH := device/sony/aurora
 
-# Assert
-TARGET_OTA_ASSERT_DEVICE := H8166,H8116,aurora,aurora_dual
-
 # Display
 TARGET_SCREEN_DENSITY := 420
 
